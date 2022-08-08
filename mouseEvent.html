@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Practice에 -->
+<title>마우스 이벤트</title>
+<style type="text/css">
+   /* 클래스 이름으로 따로 하지 않은 이유는 div 태그 모두에 적용하기 위함 */
+   div {
+      margin: 20px;
+      padding: 40px;
+      background-color: lightgray;
+   }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<script type="text/javascript">
+   // jquery 가동 준비 
+   $(document).ready(function(){
+      $(".box1").mouseover(function(){
+         // 인라인 요소인 strong, em 태그 활용
+         // mouseover가 발생할 때 마다 result class에 마우스오버 문구를 넣는다.
+         $(".result").append("<strong>마우스오버</strong>");
+      });
+         // mouseenter가 발생할 때 마다 result class에 마우스엔터 문구를 넣는다.
+      $(".box2").mouseenter(function(){
+         $(".result").append("<em>마우스엔터</em>");
+      });
+   });
+</script>
+<div class="box1">마우스오버</div>
+<div class="box2">마우스엔터</div>
+<div class="result"></div>
+
+</body>
+</html>
